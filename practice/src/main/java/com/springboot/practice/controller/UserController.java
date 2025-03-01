@@ -23,17 +23,17 @@ public class UserController {
         return svc.getAllUsers();
     }
     
-    @GetMapping("/{i}")
+    @GetMapping("/{id}")
     public User getById(@PathVariable int id){
         return svc.getUserById(id);
     }
     
-    @PutMapping("/{i}")
+    @PutMapping("/{id}")
     public User updateUser(@PathVariable int id, @RequestBody User u){
         return svc.updateUser(id, u);
     }
     
-    @DeleteMapping("/{i}")
+    @DeleteMapping("/{id}")
     public String deleteById(@PathVariable int id){
         return svc.deleteUserById(id);
     }
